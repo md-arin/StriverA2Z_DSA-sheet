@@ -7,28 +7,39 @@ public class SecondLargest_element {
     public static void main(String[] args) {
 
         int [] arr = {3,6,2,9,1,7};
-        int []ans = getSecondOrderElements(arr.length,arr);
-        System.out.println(Arrays.toString(ans));
-    }
-    static int[] getSecondOrderElements(int n, int []a) {
-        // Write your code here.
-        sort(a, n);
-        int secondLargestelement = a[n-1-1];
-        int secondSmallest = a[1];
-        int []ans = {secondLargestelement,secondSmallest};
-        return ans;
+        int n = arr.length;
+        int sLargest = secondLargest(arr,n);
+        int sSmallest = secondSmallest(arr,n);
+        System.out.println("Second largest and second smallest values are: " + sLargest +","+  sSmallest);
     }
 
-    static void sort(int []arr,int size){
+    static int  secondLargest(int[]arr, int n){
+        int largest = arr[0];
+        int slargest = -1;
+        for (int i = 0; i < n; i++) {
+            if(arr[i]>largest){
+                slargest = largest;
+                largest = arr[i];
+            } else if (arr[i] < largest && arr[i] > slargest) {
+                slargest = arr[i];
+            }
 
-        for(int i = 0; i <= size -1; i++){
-            int j = i;
-            while(j > 0 && arr[j-1] > arr[j]){
-                int temp = arr[j-1];
-                arr[j-1] = arr[j];
-                arr[j] =  temp;
-                j--;
+        }
+        return slargest;
+    }
+
+    static int secondSmallest(int[] arr, int n){
+        int smallest = arr[0];
+        int ssmallest = Integer.MAX_VALUE;
+        for(int i = 0; i<n; i++){
+            if(arr[i]<smallest){
+                ssmallest = smallest;
+                smallest = arr[i];
+            }
+            else if (arr[i] != smallest && arr[i]<ssmallest) {
+                ssmallest = arr[i];
             }
         }
+        return  ssmallest;
     }
 }
