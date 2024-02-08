@@ -1,4 +1,4 @@
-package Array_questions;
+package Array_questions.Easy;
 
 // https://leetcode.com/problems/max-consecutive-ones/submissions/1167787673/
 

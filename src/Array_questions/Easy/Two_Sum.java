@@ -1,4 +1,4 @@
-package Array_questions;
+package Array_questions.Easy;
 
 // https://www.codingninjas.com/studio/problems/reading_6845742?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf&leftPanelTabValue=PROBLEM
 

@@ -1,4 +1,4 @@
-package Array_questions;
+package Array_questions.Easy;
 
 //https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/description/
 

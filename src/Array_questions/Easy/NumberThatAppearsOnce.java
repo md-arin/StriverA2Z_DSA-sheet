@@ -1,4 +1,4 @@
-package Array_questions;
+package Array_questions.Easy;
 
 public class NumberThatAppearsOnce {
     public static void main(String[] args) {
