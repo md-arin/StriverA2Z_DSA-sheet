@@ -1,4 +1,4 @@
-package Array_questions;
+package Array_questions.Medium;
 
 import java.util.ArrayList;
 import java.util.Arrays;
