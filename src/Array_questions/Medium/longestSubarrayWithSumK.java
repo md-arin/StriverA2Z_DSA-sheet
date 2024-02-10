@@ -2,8 +2,8 @@ package Array_questions.Medium;
 
 public class longestSubarrayWithSumK {
     public static void main(String[] args) {
-        int []arr = {1,2,1,3};
-        System.out.println(solution(arr,5));
+        int []arr = { 2,2,4,1,2}; // 1,2,1,3
+        System.out.println(solution(arr,2));
     }
 
     static int solution(int []arr, long k) {
@@ -12,25 +12,24 @@ public class longestSubarrayWithSumK {
         int ansStart;
         int end;
         int maxi = 0;
-        for(int i =0; i< arr.length; i++ ){
+
+        for(int i =0; i<arr.length; i++){
 
             if(sum == 0){
                 start = i;
             }
 
-            sum += arr[i];
+            sum+= arr[i];
 
-            if(sum > k) sum = 0;
-
-            if(sum == k){
+            if(sum == k || arr[i] == k){
                 ansStart = start;
                 end = i;
-                int cureentSubArray = (end - ansStart) + 1;
-                if(cureentSubArray > maxi){
-                    maxi = cureentSubArray;
+                int currentMax = ansStart + (end - ansStart);
+                if(currentMax > maxi){
+                    maxi = currentMax;
                 }
-                sum = 0;
             }
+            if(sum > k ) sum = 0;
         }
         return maxi;
     }
