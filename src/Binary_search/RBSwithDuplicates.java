@@ -20,6 +20,7 @@ public class RBSwithDuplicates {
                 continue;
             }
 
+
             if(nums[mid]>=nums[s]){
                 if(nums[s] <= target && target <= nums[mid]){
                     e = mid - 1;
